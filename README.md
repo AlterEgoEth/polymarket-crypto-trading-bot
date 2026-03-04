@@ -20,6 +20,10 @@ A collection of automated trading bots for **Polymarket** binary Up/Down markets
 | 7 | [**5min Low-Side Buy**](#7-5-minute-low-side-buy-bot) | 5 min | Buy at 1-3c on both sides for asymmetric reversal payoffs |
 
 ---
+![photo_2026-02-26_11-48-37](https://github.com/user-attachments/assets/8be72f5c-31cf-422c-858c-9eea78905430)
+
+![photo_2026-02-24_12-09-26](https://github.com/user-attachments/assets/1483bc08-794b-44d8-a464-b80623554006)
+![photo_2026-02-24_12-09-31](https://github.com/user-attachments/assets/345f81b6-f4eb-456e-9871-4d5d5809bdb5)
 
 ## Strategy Summaries
 
@@ -34,12 +38,12 @@ Monitors 15-minute Up/Down markets and detects sudden price drops ("dumps"). Whe
 > **Strategy credit:** Based on [The Smart Ape's](https://x.com/the_smart_ape) two-leg catching-and-hedging strategy for Polymarket BTC 15-minute UP/DOWN markets ([original tweet](https://x.com/the_smart_ape/status/2005576087875527082) · [detailed write-up on Lookonchain](https://www.lookonchain.com/articles/1209)). The Smart Ape's approach — detect a sharp dump on one side, buy it, then hedge by buying the opposite side when the combined cost is below $1 — achieved ~86% ROI in backtesting. This bot is a Rust implementation of that core idea with added stop-loss management, multi-asset support, and automatic redemption.
 
 **Real Results:**
+<img width="1373" height="535" alt="15min-3" src="https://github.com/user-attachments/assets/bb90c2e3-6178-4348-920a-d3a7a1a53dea" />
+<img width="3159" height="663" alt="15-ex-1" src="https://github.com/user-attachments/assets/e0064780-7b3e-4f22-94fa-ad685ef0023e" />
+<img width="3146" height="657" alt="15-ex-1-2" src="https://github.com/user-attachments/assets/8688db22-17ba-42ca-83e9-23becdbcc4b2" />
+<img width="450" height="603" alt="15min" src="https://github.com/user-attachments/assets/c7ac3444-caa6-4781-8e72-33cd7dc93240" />
 
-![15min Dump & Hedge Results](docs/screenshots/15m-2.png)
-![15min Dump & Hedge Results](docs/screenshots/15min-3.png)
-![15min Dump & Hedge Results](docs/screenshots/15-ex-1.png)
-![15min Dump & Hedge Results](docs/screenshots/15-ex-1-2.png)
-![15min Dump & Hedge Results](docs/screenshots/15min.png)
+
 
 [Read full strategy details ->](docs/15min-dump-and-hedge.md)
 
@@ -52,8 +56,9 @@ Places limit BUY orders for **both Up and Down** at a low price (e.g. $0.45 each
 **Key parameters:** price limit, signal stable range, sell-opposite timing, danger price.
 
 **Real Results:**
+<img width="2968" height="586" alt="15-ex-2-1" src="https://github.com/user-attachments/assets/8e7e74c4-0bb7-451e-8a80-9f2ec3d5b2fd" />
+<img width="3060" height="558" alt="15-ex-2-2" src="https://github.com/user-attachments/assets/a37d80c5-9c11-4043-b27c-7d560c1b50bf" />
 
-![15min Pre-Order Results](docs/screenshots/15min-pre-order-mid-market-result.png)
 
 [Read full strategy details ->](docs/15min-pre-order-mid-market.md)
 
@@ -80,8 +85,7 @@ Extends the 1-hour pre-limit strategy with **dynamic mid-market orders** during 
 **Key parameters:** price limit, opposite-side discount, mid-market enabled, signal.
 
 **Real Results:**
-
-![1hour Pre-Limit + Mid-Market Results](docs/screenshots/1hour-pre-limit-mid-market-result.png)
+<img width="1167" height="698" alt="Screenshot_1" src="https://github.com/user-attachments/assets/e3ee3c0d-5827-40a5-933d-6ccbcc1b3a54" />
 
 [Read full strategy details ->](docs/1hour-pre-limit-order-mid-market.md)
 
@@ -95,7 +99,8 @@ Same concept as the 15-minute pre-order bot, adapted for the faster 5-minute mar
 
 **Real Results:**
 
-![5min Pre-Order Results](docs/screenshots/5min-pre-order-mid-market-result.png)
+<img width="1124" height="156" alt="Screenshot_2" src="https://github.com/user-attachments/assets/c6ddfdf2-15ec-4161-bd71-abcf0e44cf05" />
+<img width="1404" height="578" alt="Screenshot_1" src="https://github.com/user-attachments/assets/98aa358e-1869-44a1-9c43-141e9583131d" />
 
 [Read full strategy details ->](docs/5min-pre-order-mid-market.md)
 
@@ -109,7 +114,7 @@ When one side is strongly favored (bid >= 90c+) late in a 5-minute period, the b
 
 **Real Results:**
 
-![5min High-Side Buy Results](docs/screenshots/5min-high-side-buy-result.png)
+
 
 [Read full strategy details ->](docs/5min-high-side-buy.md)
 
@@ -123,7 +128,6 @@ Places limit buys at very low prices (1c, 2c, 3c) on **both** Up and Down. Each 
 
 **Real Results:**
 
-![5min Low-Side Buy Results](docs/screenshots/5min-low-side-buy-result.png)
 
 [Read full strategy details ->](docs/5min-low-side-buy.md)
 
