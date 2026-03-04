@@ -113,6 +113,7 @@ When one side is strongly favored (bid >= 90c+) late in a 5-minute period, the b
 **Key parameters:** threshold, after seconds, sell-under price, hedge (opposite) enabled.
 
 **Real Results:**
+<img width="1010" height="428" alt="Screenshot_3" src="https://github.com/user-attachments/assets/05ba3362-2456-4e19-96af-20cfed752817" />
 
 
 
